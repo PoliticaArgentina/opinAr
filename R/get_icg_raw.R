@@ -31,7 +31,7 @@ get_icg_raw <- function(){
                                          silent = TRUE))
 
 
-  message(glue::glue("Índice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella.
+  message(glue::glue("Indice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella.
   Base de datos descargada el {format(Sys.Date(), '%d %B de %Y')} desde https://www.utdt.edu/icg"))
 
   if(is.null(default)){
@@ -39,8 +39,8 @@ get_icg_raw <- function(){
       janitor::clean_names(),
     silent = TRUE))
 
-    message(glue::glue("Índice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella.
-  Base de datos descargada corresponde al último backup en repositorio de datos https://github.com/PoliticaArgentina/data_warehouse/tree/master/opinAr"))
+    message(glue::glue("Indice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella.
+  Base de datos descargada corresponde al ultimo backup en repositorio de datos https://github.com/PoliticaArgentina/data_warehouse/tree/master/opinAr"))
 
         if(is.null(default)){
       df <- base::message("Fail to download data. Source is not available // La fuente de datos no esta disponible")

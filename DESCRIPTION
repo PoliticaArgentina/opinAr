@@ -17,4 +17,5 @@ Imports:
     haven,
     janitor,
     magrittr,
-    rvest
+    rvest, 
+    glue

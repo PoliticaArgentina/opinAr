@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: ubuntu-latest,   r: 'release'}
+          - {os: macOs-latest,   r: 'release'}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -21,9 +21,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Install libcurl
-        run: |
-          sudo apt-get install libcurl4-openssl-dev
 
       - uses: r-lib/actions/setup-r@master
         with:

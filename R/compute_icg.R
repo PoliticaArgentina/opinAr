@@ -25,4 +25,3 @@ compute_icg <- function(data = df, wave = NULL, segment_by = NULL){
   }
 }
 
-compute_icg(df, wave = 530, segment_by = sexo)

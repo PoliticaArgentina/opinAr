@@ -34,8 +34,11 @@ compute_icg <- function(data, wave = NULL, segment_by = NULL){
 
   # Check parameters
 
-  assertthat::assert_that(wave > min(data$ola) & wave < max(data$ola),
+  assertthat::assert_that(base::all(wave > min(data$ola)) & all(wave < max(data$ola)),
                           msg = glue::glue({wave}," does not exist. Check the codebook for the right number of wave"))
+
+  assertthat::assert_that(rlang::quo_name(segment_by) %in% c("NULL","zona","edad","sexo","edu","sit_ec"),
+                          msg = glue::glue("This segment is not a valid option. Options available are 'zona','edad','sexo','edu','sit_ec'" ))
 
 
   if(base::is.null(wave)){
@@ -61,7 +64,3 @@ compute_icg <- function(data, wave = NULL, segment_by = NULL){
 
 
 }
-
-
-
-

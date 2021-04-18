@@ -16,6 +16,9 @@ RoxygenNote: 7.1.1
 Imports: 
     haven,
     janitor,
-    magrittr,
-    rvest, 
-    glue
+    rvest,
+    glue,
+    dplyr,
+    purrr,
+    stringr,
+    magrittr

@@ -1,5 +1,5 @@
 
-# Datos de `opin`ión de política `Ar`rgentina usando `R` <a><img src="https://github.com/politicaargentina/data_warehouse/blob/master/hex/polAr.png?raw=true" width="200" align="right" /></a>
+# Datos de `opin`ión de política `Ar`rgentina usando `R` <a><img src="https://github.com/politicaargentina/data_warehouse/blob/master/hex/opinAr.png?raw=true" width="200" align="right" /></a>
 
 
 `{opinAr}` brinda herramientas que facilitan el acceso y el trabajo con datos de opinión del _Índice de Confianza en el Gobierno_, relevados por la Universidad Torcuato Di Tella. 

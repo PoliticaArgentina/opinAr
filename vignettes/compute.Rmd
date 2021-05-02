@@ -1,0 +1,46 @@
+---
+title: "Cálculos"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Cálculos}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(opinAr)
+```
+
+### CÁLCULOS (*Computation*)
+
+- **`compute_icg()`**: Calcula el ICG de cada ola (una por cada mes desde noviembre del 2001). El parámetro `wave` permite calcularlo para las distintas olas y el parámetro `segment_by` calcularlo según distintas segmentaciones de la `data` (*Computes the ICG for each wave (one per month since november 2001). The parameter `wave` allows to calculate it for the different waves and the parameter `segment_by` to calculate ir for each one of the segments in `data`*).
+
+
+---
+
+### Ejemplos (*Examples*)
+
+#### Computar ICG (*Computes ICG*)
+
+El cálculo se realizará con los datos previamente descargados con `get_icg_raw()`. La función `compute_icg()` tiene un parámetro `wave` para elegir el número de ola y un parámetro `segment` para elegir la variable de segmentación
+
+
+(*The calculation will be done based on the downloaded data with `get_icg_raw()`. The `compute_icg()` function has a parameter to choose the wave and other to choose the segmentation variable*) 
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+  
+ opinAr::get_icg_raw() -> icg_data
+ 
+ 
+ 
+   opinAr::compute_icg(data = icg_data , wave = "710", segment_by = sexo)
+   
+```

@@ -5,7 +5,7 @@
 #'  (\emph{Function to compute ICG results})
 #'
 #' @param data un tibble guardado como objeto en el enviroment luego de consultar \code{\link{get_icg_raw}}
-#'  (\emph{A tibble saved as an object in the enviroment after querying \code{\link{get_icg_raw}}).
+#'  (\emph{A tibble saved as an object in the enviroment after querying \code{\link{get_icg_raw}}}).
 #'
 #' @param wave es el número de ola para la que se quiere computar el ICG
 #'  (\emph{number of wave to which compute the ICG}).
@@ -16,11 +16,6 @@
 #' @return devuelve un tibble con \code{class "tbl_df","tbl", "data.frame"} con el valor del ICG y de cada una de sus dimensiones por una o más olas  y segmentado por las variables deseadas
 #'  (\emph{returns a tibble with \code{class "tbl_df", "tbl", "data.frame"} with the value of the ICG and the dimensions for one or more waves and segmented by desired variables}).
 #'
-#' @examples
-#'
-#'  icg_raw_data
-#'
-#'   x <- compute_icg(icg_raw_data)
 #'
 #' @seealso
 #' \code{\link{get_icg_raw}}

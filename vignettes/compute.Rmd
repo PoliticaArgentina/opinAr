@@ -18,29 +18,73 @@ knitr::opts_chunk$set(
 library(opinAr)
 ```
 
-### CÁLCULOS (*Computation*)
+### CÁLCULOS (*Computation*) 
 
-- **`compute_icg()`**: Calcula el ICG de cada ola (una por cada mes desde noviembre del 2001). El parámetro `wave` permite calcularlo para las distintas olas y el parámetro `segment_by` calcularlo según distintas segmentaciones de la `data` (*Computes the ICG for each wave (one per month since november 2001). The parameter `wave` allows to calculate it for the different waves and the parameter `segment_by` to calculate ir for each one of the segments in `data`*).
+Calcula el ICG de cada ola (una por cada mes desde noviembre del 2001 (*Computes the ICG for each wave one per month since november 2001*).
 
+-   El parámetro `wave` permite calcularlo para las distintas olas de la `data` ( *wave parameter allos wto compute icg for different waves along the period*).
 
----
+-   el parámetro `segment_by` calcularlo según distintas segmentaciones de la `data` tales como el sexo, edad, situación económica o nivel educativo (*parameter `segment_by` allows computations for different segments in `data` such as sex, age, education level or economic condition*)
 
-### Ejemplos (*Examples*)
+------------------------------------------------------------------------
 
-#### Computar ICG (*Computes ICG*)
+### Ejemplo (*Example*)
 
-El cálculo se realizará con los datos previamente descargados con `get_icg_raw()`. La función `compute_icg()` tiene un parámetro `wave` para elegir el número de ola y un parámetro `segment` para elegir la variable de segmentación
+### **`compute_icg()`**
 
+El cálculo se realizará con los datos previamente descargados con `get_icg_raw()`.
 
-(*The calculation will be done based on the downloaded data with `get_icg_raw()`. The `compute_icg()` function has a parameter to choose the wave and other to choose the segmentation variable*) 
+La función `compute_icg()` tiene:
 
+-   un parámetro `wave` para elegir el número de ola;
+
+```{=html}
+<!-- -->
+```
+-   un parámetro `segment` para elegir la variable de segmentación
+
+(*The calculation will be done based on the downloaded data with `get_icg_raw()`. The `compute_icg()` function has a parameter to choose the wave and other to choose the segmentation variable*)
+
+**Cálculo simple: `icg` para toda la base de datos**
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
   
- opinAr::get_icg_raw() -> icg_data
+  # donwnload data 
+ 
+opinAr::get_icg_raw() -> icg_data
+ 
+ # compute ICG
+ 
+opinAr::compute_icg(data = icg_data)
+   
+ 
+   
+```
+
+**Cálculo segmentado: `icg` con apertura por género**
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+  
+
+ ###  ICG by gender
+ 
+   opinAr::compute_icg(data = icg_data , segment_by = sexo)
+   
+```
+
+**Cálculo segmentado II: `icg` por calendario**
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+  
+# Consultamos ID de olas de interés. Por ejemplo de los meses de diciembre durante la presidencia de Mauricio Macri
+
+ opinAr::show_waves(data = icg_data) %>% 
+  dplyr::filter(mes == 12 & (ano >= 2015 & ano < 2019)) # filtramos para obtener número de ola de interes
  
  
+ opinAr::compute_icg(data = icg_data, 
+                      wave = c(671, 683, 695, 707))
  
-   opinAr::compute_icg(data = icg_data , wave = "710", segment_by = sexo)
+ 
    
 ```

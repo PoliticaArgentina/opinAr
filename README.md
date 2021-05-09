@@ -8,8 +8,8 @@
 
 ---
 
-## Índice de Confianza en el Gobierno (ICG) 
-[utdt.edu/icg](https://www.utdt.edu//ver_contenido.php?id_contenido=1351&id_item_menu=2970)
+## ICG
+### Índice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella [utdt.edu/icg](https://www.utdt.edu//ver_contenido.php?id_contenido=1351&id_item_menu=2970)
 
 
 _El ICG tiene como objetivo medir la evolución de la opinión pública respecto de la labor que desarrolla el gobierno nacional. Está diseñado de forma de captar lo que los ciudadanos piensan respecto de aspectos esenciales del gobierno nacional, a partir de la estimación de cinco dimensiones_:
@@ -39,3 +39,32 @@ _El índice se presenta en una escala que varía entre un mínimo de 0 y un máx
 devtools::install_github("politicaargentina/opinAr")
 
 ```
+
+### ARTÍCULOS (_Articles_)
+
+* [DATOS (_Data_)](https://github.com/PoliticaArgentina/opinAr/docs/articles/data.html)
+
+* [CÁLCULO DE INDICADORES (_Computations_)](https://github.com/PoliticaArgentina/opinAr/docs/articles/compute.html)
+
+
+
+Parat citar {opinAr} usar (_to cite package ‘opinAr’ in publications use_):
+
+```
+   Camila Higa and Juan Pablo Ruiz Nicolini (2021).
+  opinAr: Argentina´s Public Opinion Toolbox. R
+  package version 0.0.0.9000.
+```
+
+Una entrada para usuarios \LaTeX (_an entry for LaTeX users_):
+
+``` 
+  @Manual{,
+    title = {opinAr: Argentina´s Public Opinion Toolbox},
+    author = {Camila {Higa} and Juan Pablo Ruiz Nicolini},
+    year = {2021},
+    note = {R package version 0.0.0.9000},
+  }
+
+```
+

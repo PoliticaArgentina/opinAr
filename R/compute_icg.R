@@ -23,7 +23,9 @@
 #' @export
 
 
-compute_icg <- function(data, wave = NULL, segment_by = NULL){
+compute_icg <- function(data,
+                        wave = NULL,
+                        segment_by = NULL){
 
   segment_by <- dplyr::enquo(segment_by)
 

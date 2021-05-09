@@ -20,8 +20,11 @@
 #' @export
 
 
-show_waves <- function(data, viewer = F){
+show_waves <- function(data = NULL,
+                       viewer = F){
 
+  assertthat::assert_that(!is.null(data),
+                          msg = glue::glue("'data' can not be NULL. Yoy can download ir with 'get_icg_raw() function"))
   #bind the variable locally
   ano <- mes <- fecha <- NULL
 

@@ -20,23 +20,23 @@ knitr::opts_chunk$set(
 
 El ICG se obtiene de una encuesta mensual y se compone de 5 dimensiones basadas en las siguientes preguntas (*ICG is calculated based on a monthly survey. Its 5 dimensions come from the following questions* ):
 
--   **`eval_gob`**: ¿Cómo evalúa usted al gobierno nacional en términos de muy bien, bien, regular, mal, o muy mal?: **1** Muy bien; **2** Bien; **3** Regular; **4** Mal; **5** Muy mal; **6** Ns/ nc \
+-   **`eval_gob`**: ¿Cómo evalúa usted al gobierno nacional en términos de muy bien, bien, regular, mal, o muy mal?: **1** Muy bien; **2** Bien; **3** Regular; **4** Mal; **5** Muy mal; **6** Ns/ nc\
     \
     (*How do you evaluate to the national government in terms of very good, good, regular, bad, very bad? : **1**; Very good; **2** Good; **3** Regular; **4** Bad; **5** Very bad; **6** Ns/ nc*)
 
--   **`benef_gob`**: ¿Usted diría que en general, el gobierno nacional actúa pensando en el beneficio de algunos pocos sectores o pensando en el beneficio de la mayoría de la gente?: **1** Sectores; **2** Gente; **3** Otro; **4** Ns nc \
+-   **`benef_gob`**: ¿Usted diría que en general, el gobierno nacional actúa pensando en el beneficio de algunos pocos sectores o pensando en el beneficio de la mayoría de la gente?: **1** Sectores; **2** Gente; **3** Otro; **4** Ns nc\
     \
     (*In general terms, the government acts for the benefit of some sectors or for the benefit of most of the people? : **1** Sectors; **2** People; **3** Another; **4** Ns/ nc*)
 
--   **`adm_gp`**: ¿Usted diría que en general, el gobierno nacional administra el gasto público con eficiencia, con cierta eficiencia, con un poco de ineficiencia o muy ineficientemente?: **1** Eficiencia; **2** Cierta eficiencia; **3** Un poco de ineficiencia; **4** Muy ineficientemente; **5** Ns nc. \
+-   **`adm_gp`**: ¿Usted diría que en general, el gobierno nacional administra el gasto público con eficiencia, con cierta eficiencia, con un poco de ineficiencia o muy ineficientemente?: **1** Eficiencia; **2** Cierta eficiencia; **3** Un poco de ineficiencia; **4** Muy ineficientemente; **5** Ns nc.\
     \
     (*In general, the national government administers the public spending efficiently, quite efficiently, quite inefficiently, very inefficiently? : **1** efficiently; **2** quite efficiently; **3** quite inefficiently; **4** very inefficiently; **5** Ns/nc*)
 
--   **`cor_gob`**: ¿Usted diría que de las personas que forman el gobierno nacional la mayoría son corruptas, que unos pocos son corruptos, o que casi ninguno es corrupto?: **1** La mayoría son corruptas; **2** Unos pocos son corruptos; **3** Casi ninguno es corrupto; **4** Ns nc \
+-   **`cor_gob`**: ¿Usted diría que de las personas que forman el gobierno nacional la mayoría son corruptas, que unos pocos son corruptos, o que casi ninguno es corrupto?: **1** La mayoría son corruptas; **2** Unos pocos son corruptos; **3** Casi ninguno es corrupto; **4** Ns nc\
     \
     (*Do you think that people in charge of the national government are mostly corrupt, a few are corrupt or that almost no one is corrupt? : **1** Most of them are corrupt; **2** A few of them are corrupt; **3** Almost no one of them are corrupt; **4** Ns/nc*)
 
--   **`resol_prob`**: ¿Cuál de las siguientes frases se acerca más a lo que usted piensa?: **1** Este gobierno está resolviendo los problemas del país; **2** Este gobierno sabe cómo resolver los problemas del país pero necesita tiempo; **3** Este gobierno no sabe cómo resolver los problemas del país; **4** Ns nc \
+-   **`resol_prob`**: ¿Cuál de las siguientes frases se acerca más a lo que usted piensa?: **1** Este gobierno está resolviendo los problemas del país; **2** Este gobierno sabe cómo resolver los problemas del país pero necesita tiempo; **3** Este gobierno no sabe cómo resolver los problemas del país; **4** Ns nc\
     \
     (*Which of the following sentences is closer to your opinion?: **1** This government is solving the country's problems; **2** This government knows how to solve the country's problems but needs time; **3** This government doesn't know how to solve the country's problems; **4** Ns/nc*)
 
@@ -105,6 +105,12 @@ get_icg_raw()
 
 ```
 
-## FUENTES (*Sources*)
+#### FUENTES (*Sources*)
 
--   Los datos provienen de la las bases en formato `.dta` descargadas de la página de la Escuela de Gobierno de la Universidad Torcuato Di Tella [utdt.edu/icg](https://www.utdt.edu/ver_contenido.php?id_contenido=17876&id_item_menu=28756) (*Access to raw data comes from databases in `.dta` files of the Escuela de Gobierno de la Universidad Torcuato Di Tella* [utdt.edu/icg](%5B%3Chttps://www.utdt.edu/ver_contenido.php?id_contenido=17876&id_item_menu=28756%3E%5D(https://www.utdt.edu/ver_contenido.php?id_contenido=17876&id_item_menu=28756)%7B.uri%7D)).
+**Índice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella**
+
+-   Los datos provienen de la las bases en formato `.dta` descargadas de la página de la Escuela de Gobierno de la Universidad Torcuato Di Tella [utdt.edu/icg](https://www.utdt.edu/ver_contenido.php?id_contenido=17876&id_item_menu=28756) \
+    \
+    (*Access to raw data comes from databases in `.dta` files of the Escuela de Gobierno de la Universidad Torcuato Di Tella* [utdt.edu/icg](%5B%3Chttps://www.utdt.edu/ver_contenido.php?id_contenido=17876&id_item_menu=28756%3E%5D(https://www.utdt.edu/ver_contenido.php?id_contenido=17876&id_item_menu=28756)%7B.uri%7D)).
+
+**Para consultas sobre el índice, dirigirse a los profesores Carlos Gervasoni ([cgervasoni\@utdt.edu](mailto:cgervasoni@utdt.edu)) o Javier Zelaznik ([jzelaznik\@utdt.edu](mailto:jzelaznik@utdt.edu))**

@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 library(opinAr)
 ```
 
-### CÁLCULOS (*Computation*) 
+### CÁLCULOS (*Computation*)
 
 Calcula el ICG de cada ola (una por cada mes desde noviembre del 2001 (*Computes the ICG for each wave one per month since november 2001*).
 
@@ -38,10 +38,9 @@ La función `compute_icg()` tiene:
 
 -   un parámetro `wave` para elegir el número de ola;
 
-```{=html}
 <!-- -->
-```
--   un parámetro `segment` para elegir la variable de segmentación
+
+-   un parámetro *`segment_by`* para elegir la variable de segmentación
 
 (*The calculation will be done based on the downloaded data with `get_icg_raw()`. The `compute_icg()` function has a parameter to choose the wave and other to choose the segmentation variable*)
 

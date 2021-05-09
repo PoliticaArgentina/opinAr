@@ -42,9 +42,9 @@ devtools::install_github("politicaargentina/opinAr")
 
 ### ARTÍCULOS (_Articles_)
 
-* [DATOS (_Data_)](https://github.com/PoliticaArgentina/opinAr/docs/articles/data.html)
+* [DATOS (_Data_)](https://politicaargentina.github.io/opinAr/articles/data.html)
 
-* [CÁLCULO DE INDICADORES (_Computations_)](https://github.com/PoliticaArgentina/opinAr/docs/articles/compute.html)
+* [CÁLCULO DE INDICADORES (_Computations_)](https://politicaargentina.github.io/opinAr/articles/data.html)
 
 
 ### CITAR (_Cite_)

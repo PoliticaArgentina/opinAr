@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2021 Juan Pablo Ruiz Nicolini
+Copyright (c) 2021 opinAr authors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

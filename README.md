@@ -1,14 +1,14 @@
 
 # Datos de `opin`ión de política `Ar`rgentina usando `R` <a><img src="https://github.com/politicaargentina/data_warehouse/blob/master/hex/opinAr.PNG?raw=true" width="200" align="right" /></a>
 
+### ICG
 
-`{opinAr}` brinda herramientas que facilitan el acceso y el trabajo con datos de opinión del _Índice de Confianza en el Gobierno_, relevados por la Universidad Torcuato Di Tella. 
-
+`{opinAr}` brinda herramientas que facilitan el acceso y el trabajo con datos de opinión del _Índice de Confianza en el Gobierno_ (ICG), relevados por la Universidad Torcuato Di Tella. 
 
 
 ---
 
-## ICG
+
 ### Índice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella [utdt.edu/icg](https://www.utdt.edu//ver_contenido.php?id_contenido=1351&id_item_menu=2970)
 
 
@@ -47,8 +47,9 @@ devtools::install_github("politicaargentina/opinAr")
 * [CÁLCULO DE INDICADORES (_Computations_)](https://github.com/PoliticaArgentina/opinAr/docs/articles/compute.html)
 
 
+### CITAR (_Cite_)
 
-Parat citar {opinAr} usar (_to cite package ‘opinAr’ in publications use_):
+Para citar `{opinAr}` usar (_to cite package ‘opinAr’ in publications use_):
 
 ```
    Camila Higa and Juan Pablo Ruiz Nicolini (2021).

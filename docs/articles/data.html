@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Datos • opinAr</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
@@ -13,6 +19,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Datos">
 <meta property="og:description" content="opinAr">
+<meta property="og:image" content="https://politicaargentina.github.io/opinAr/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -65,7 +72,14 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/PoliticaArgentina/opinAr/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -81,20 +95,16 @@
       <h1 data-toc-skip>Datos</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/PoliticaArgentina/opinAr/blob/master/vignettes/data.Rmd"><code>vignettes/data.Rmd</code></a></small>
       <div class="hidden name"><code>data.Rmd</code></div>
 
     </div>
 
     
     
-<div id="explorar-datos-data-explorer" class="section level2">
+<div id="datos-data" class="section level2">
 <h2 class="hasAnchor">
-<a href="#explorar-datos-data-explorer" class="anchor"></a>EXPLORAR DATOS (<em>Data explorer</em>)</h2>
-<ul>
-<li>
-<strong><code><a href="../reference/show_codebook.html">show_codebook()</a></code></strong>: Libro de código de variables para calcular el ICG y variables para segmentarlo. El parámetro <code>viewer = TRUE</code> habilita una tabla en el <em>Viewer</em> de <code>RStudio</code> (<em>Codebook of variables to calculate ICG and variables to segment it. The <code>viewer = TRUE</code> parameter enables a table in the Viewer</em> of<code>RStudio</code>).</li>
-</ul>
+<a href="#datos-data" class="anchor"></a>DATOS (<em>Data</em>)</h2>
 <p>El ICG se obtiene de una encuesta mensual y se compone de 5 dimensiones basadas en las siguientes preguntas (<em>ICG is calculated based on a monthly survey. Its 5 dimensions come from the following questions</em> ):</p>
 <ul>
 <li><p><strong><code>eval_gob</code></strong>: ¿Cómo evalúa usted al gobierno nacional en términos de muy bien, bien, regular, mal, o muy mal?: <strong>1</strong> Muy bien; <strong>2</strong> Bien; <strong>3</strong> Regular; <strong>4</strong> Mal; <strong>5</strong> Muy mal; <strong>6</strong> Ns/ nc<br><br>
@@ -108,72 +118,88 @@
 <li><p><strong><code>resol_prob</code></strong>: ¿Cuál de las siguientes frases se acerca más a lo que usted piensa?: <strong>1</strong> Este gobierno está resolviendo los problemas del país; <strong>2</strong> Este gobierno sabe cómo resolver los problemas del país pero necesita tiempo; <strong>3</strong> Este gobierno no sabe cómo resolver los problemas del país; <strong>4</strong> Ns nc<br><br>
 (<em>Which of the following sentences is closer to your opinion?: <strong>1</strong> This government is solving the country’s problems; <strong>2</strong> This government knows how to solve the country’s problems but needs time; <strong>3</strong> This government doesn’t know how to solve the country’s problems; <strong>4</strong> Ns/nc</em>)</p></li>
 </ul>
-<div id="segmentos-segemnt" class="section level3">
+<div id="segmentos-segemnts" class="section level3">
 <h3 class="hasAnchor">
-<a href="#segmentos-segemnt" class="anchor"></a>Segmentos (<em>Segemnt</em>)</h3>
+<a href="#segmentos-segemnts" class="anchor"></a>Segmentos (<em>segemnts</em>)</h3>
 <p>El ICG puede calcularse segmentado por las variables <code>zona</code>, <code>edad</code>, <code>sexo</code>, <code>edu</code>, <code>sit_ec</code> basadas en las siguientes preguntas (<em>ICG can be segmented by the variables <code>zona</code>, <code>edad</code>, <code>sexo</code>, <code>edu</code>, <code>sit_ec</code> that come from the following questions</em> ):</p>
 <ul>
 <li><p><strong><code>zona</code></strong>: ¿Podría decirme en qué provincia o ciudad vive usted?: 1 Ciudad de Buenos Aires 2 Provincia de Buenos Aires 3 Interior (<em>Could you tell me in which district or city do you live?: 1 Ciudad de Buenos Aires 2 Provincia de Buenos Aires 3 Interior</em>)</p></li>
 <li><p><strong><code>edad</code></strong>: ¿Podría decirme su edad?: 1 18 a 29 2 30 a 49 3 50 o más (<em>Could you tell me your age? : 1 18-29 2 30-49 3 50 or more</em>)</p></li>
 <li><p><strong><code>sexo</code></strong>: ¿De qué sexo es?: 0 Femenino 1 Masculino (<em>Which is your sex?: 0 female 1 male</em>)</p></li>
 <li><p><strong><code>edu</code></strong>: Variable que indica el máximo nivel educativo alcanzado en tres niveles. Los valores de la variable son: 1 Primario 2 Secundario 3 Terciario/Universitario (<em>Highest educational level achieved. Possible values are: 1. Elementary School 2. High School 3. College</em>)</p></li>
-<li>
-<p><strong><code>sit_ec</code></strong>: ¿Cómo cree que será la situación económica del país dentro de un año: mejor, igual o peor que la actual?: 1 Mejor 2 Igual 3 Peor 4 Ns (<em>How do you think the economic situation of the country will be within a year: 1 Better 2 The same 3 Worse 4 DN</em>)</p>
-<h3 id="explorar-olas">Explorar Olas</h3>
-</li>
-<li><p><strong><code><a href="../reference/show_waves.html">show_waves()</a></code></strong>: Imprime en número de ola y el mes y año correspondiente. El parámetro <code>viewer = TRUE</code> habilita una tabla en el <em>Viewer</em> de <code>RStudio</code> (<em>Prints the number of wave and the corresponding month and year. The <code>viewer = TRUE</code> parameter enables a table in the Viewer</em> of<code>RStudio</code>).</p></li>
+<li><p><strong><code>sit_ec</code></strong>: ¿Cómo cree que será la situación económica del país dentro de un año: mejor, igual o peor que la actual?: 1 Mejor 2 Igual 3 Peor 4 Ns (<em>How do you think the economic situation of the country will be within a year: 1 Better 2 The same 3 Worse 4 DN</em>)</p></li>
 </ul>
 </div>
+<div id="libro-de-códigos-codebook" class="section level3">
+<h3 class="hasAnchor">
+<a href="#libro-de-c%C3%B3digos-codebook" class="anchor"></a>Libro de Códigos <em>(codebook</em>)</h3>
+<ul>
+<li>
+<strong><code><a href="../reference/show_codebook.html">show_codebook()</a></code></strong>: Libro de código de variables para calcular el ICG y variables para segmentarlo. El parámetro <code>viewer = TRUE</code> habilita una tabla en el <em>Viewer</em> de <code>RStudio</code><br><br>
+(<em>Codebook of variables to calculate ICG and variables to segment it. The <code>viewer = TRUE</code> parameter enables a table in the Viewer</em> of <code>RStudio</code>).</li>
+</ul>
 </div>
-<div id="obtener-datos-crudos-get-raw-data" class="section level2">
-<h2 class="hasAnchor">
-<a href="#obtener-datos-crudos-get-raw-data" class="anchor"></a>OBTENER DATOS CRUDOS (<em>Get raw data</em>)</h2>
+<div id="explorar-olas-explore-waves" class="section level3">
+<h3 class="hasAnchor">
+<a href="#explorar-olas-explore-waves" class="anchor"></a>Explorar Olas (<em>explore waves</em>)</h3>
+<ul>
+<li>
+<strong><code><a href="../reference/show_waves.html">show_waves()</a></code></strong>: Imprime en número de ola y el mes y año correspondiente. El parámetro <code>viewer = TRUE</code> habilita una tabla en el <em>Viewer</em> de <code>RStudio</code><br><br>
+(<em>Prints the number of wave and the corresponding month and year. The <code>viewer = TRUE</code> parameter enables a table in the Viewer</em> of<code>RStudio</code>).</li>
+</ul>
+</div>
+<div id="obtener-datos-crudos-get-raw-data" class="section level3">
+<h3 class="hasAnchor">
+<a href="#obtener-datos-crudos-get-raw-data" class="anchor"></a>Obtener datos crudos (<em>get raw data</em>)</h3>
 <ul>
 <li>
 <strong><code><a href="../reference/get_icg_raw.html">get_icg_raw()</a></code></strong>: Descarga la base de datos cruda (<em>Download the raw database</em>).</li>
 </ul>
 </div>
+</div>
 <div id="ejemplos-examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#ejemplos-examples" class="anchor"></a>EJEMPLOS (<em>Examples</em>)</h2>
+<div id="obtener-datos-con-get_icg_raw-get-data" class="section level4">
+<h4 class="hasAnchor">
+<a href="#obtener-datos-con-get_icg_raw-get-data" class="anchor"></a>Obtener datos con <code>get_icg_raw()</code> (<em>get data</em>)</h4>
+<p><code><a href="../reference/get_icg_raw.html">get_icg_raw()</a></code> es la función principal para hacernos de los datos disponibles.</p>
+<p>(<em><code><a href="../reference/get_icg_raw.html">get_icg_raw()</a></code> is the main function to get the available data</em>).</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/PoliticaArgentina/opinAr">opinAr</a></span><span class="op">)</span>
+
+<span class="fu"><a href="../reference/get_icg_raw.html">get_icg_raw</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+</div>
 <div id="explorar-el-libro-de-códigos-show_codebook-explore-codebook" class="section level4">
 <h4 class="hasAnchor">
-<a href="#explorar-el-libro-de-c%C3%B3digos-show_codebook-explore-codebook" class="anchor"></a>Explorar el libro de códigos <code>show_codebook()</code> (<em>Explore Codebook</em>)</h4>
+<a href="#explorar-el-libro-de-c%C3%B3digos-show_codebook-explore-codebook" class="anchor"></a>Explorar el libro de códigos <code>show_codebook()</code> (<em>explore Codebook</em>)</h4>
 <p>La función <code><a href="../reference/show_codebook.html">show_codebook()</a></code> muestra el libro de códigos. Por defecto el parámetro <code>viewer = FALSE</code> imprime el resultado en consola. Si en cambio escribimos <code>viewer = TRUE</code> los datos se presentan en el <em>Viewer</em> de <code>RStudio</code>.</p>
 <p>(<em><code><a href="../reference/show_codebook.html">show_codebook()</a></code> function displays the codebook. By default the parameter <code>viewer = FALSE</code> prints the result in console. If instead we write <code>viewer = TRUE</code> data is presented in the <code>RStudio</code> Viewer</em>).</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R">  
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">opinAr</span><span class="op">)</span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
 <span class="fu"><a href="../reference/show_codebook.html">show_codebook</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt;    variable_name                                   description</span>
-<span class="co">#&gt; 1   eval_gob_rec                       Evaluación del gobierno</span>
-<span class="co">#&gt; 2  benef_gob_rec              Beneficio a pocos o a la mayoría</span>
-<span class="co">#&gt; 3     adm_gp_rec              Administración del gasto público</span>
-<span class="co">#&gt; 4    cor_gob_rec                       Corrupción del gobierno</span>
-<span class="co">#&gt; 5 resol_prob_rec                Solución de problemas del país</span>
-<span class="co">#&gt; 6           zona         Zona en la que se realizó la encuesta</span>
-<span class="co">#&gt; 7           sexo                                          Sexo</span>
-<span class="co">#&gt; 8           edad                                 Rango de edad</span>
-<span class="co">#&gt; 9            edu Máximo nivel educativo alcanzado en 3 niveles</span>
-<span class="co">#&gt;                 tidy_variable_name</span>
-<span class="co">#&gt; 1          Evaluación del gobierno</span>
-<span class="co">#&gt; 2          Beneficios del gobierno</span>
-<span class="co">#&gt; 3 Administración del gasto público</span>
-<span class="co">#&gt; 4          Corrupción del gobierno</span>
-<span class="co">#&gt; 5          Resolución de problemas</span>
-<span class="co">#&gt; 6                             Zona</span>
-<span class="co">#&gt; 7                             Sexo</span>
-<span class="co">#&gt; 8                             Edad</span>
-<span class="co">#&gt; 9           Máximo Nivel Educativo</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 9 x 3</span>
+<span class="co">#&gt;   variable_name  description                         tidy_variable_name         </span>
+<span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;                               &lt;chr&gt;                      </span>
+<span class="co">#&gt; 1 eval_gob_rec   Evaluación del gobierno             Evaluación del gobierno    </span>
+<span class="co">#&gt; 2 benef_gob_rec  Beneficio a pocos o a la mayoría    Beneficios del gobierno    </span>
+<span class="co">#&gt; 3 adm_gp_rec     Administración del gasto público    Administración del gasto p~</span>
+<span class="co">#&gt; 4 cor_gob_rec    Corrupción del gobierno             Corrupción del gobierno    </span>
+<span class="co">#&gt; 5 resol_prob_rec Solución de problemas del país      Resolución de problemas    </span>
+<span class="co">#&gt; 6 zona           Zona en la que se realizó la encue~ Zona                       </span>
+<span class="co">#&gt; 7 sexo           Sexo                                Sexo                       </span>
+<span class="co">#&gt; 8 edad           Rango de edad                       Edad                       </span>
+<span class="co">#&gt; 9 edu            Máximo nivel educativo alcanzado e~ Máximo Nivel Educativo</span></code></pre></div>
 </div>
 <div id="explorar-las-olas-show_waves-explore-waves" class="section level4">
 <h4 class="hasAnchor">
-<a href="#explorar-las-olas-show_waves-explore-waves" class="anchor"></a>Explorar las olas <code>show_waves()</code> (<em>Explore waves</em>)</h4>
+<a href="#explorar-las-olas-show_waves-explore-waves" class="anchor"></a>Explorar las olas <code>show_waves()</code> (<em>explore waves</em>)</h4>
 <p>La función <code><a href="../reference/show_waves.html">show_waves()</a></code> muestra las olas y el mes y año correspondientes. Por defecto el parámetro <code>viewer = FALSE</code> imprime el resultado en consola. Si en cambio escribimos <code>viewer = TRUE</code> los datos se presentan en el <em>Viewer</em> de <code>RStudio</code>.</p>
 <p>(<em><code><a href="../reference/show_waves.html">show_waves()</a></code> function displays the number of waves and the corresponding year and month. By default the parameter <code>viewer = FALSE</code> prints the result in console. If instead we write <code>viewer = TRUE</code> data is presented in the <code>RStudio</code> Viewer</em>).</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">opinAr</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/PoliticaArgentina/opinAr">opinAr</a></span><span class="op">)</span>
 
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_icg_raw.html">get_icg_raw</a></span><span class="op">(</span><span class="op">)</span> 
 
@@ -193,44 +219,16 @@
 <span class="co">#&gt; 10   511     8  2002</span>
 <span class="co">#&gt; # ... with 219 more rows</span></code></pre></div>
 </div>
-<div id="obtener-datos-con-get_icg_raw-get-data" class="section level4">
-<h4 class="hasAnchor">
-<a href="#obtener-datos-con-get_icg_raw-get-data" class="anchor"></a>Obtener datos con <code>get_icg_raw()</code> (<em>Get data</em>)</h4>
-<p><code><a href="../reference/get_icg_raw.html">get_icg_raw()</a></code> es la función principal para hacernos de los datos disponibles.</p>
-<p>(<em><code><a href="../reference/get_icg_raw.html">get_icg_raw()</a></code> is the main function to get the available data</em>).</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R">  
-<span class="fu"><a href="../reference/get_icg_raw.html">get_icg_raw</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 241,218 x 28</span>
-<span class="co">#&gt;      ola  caso   ano   mes   dia  ciudad    zona  region    sexo    edad     edu</span>
-<span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt;</span>
-<span class="co">#&gt;  1   507     1  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 3 [más~ 1 [Pri~</span>
-<span class="co">#&gt;  2   507     2  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 3 [más~ 3 [Ter~</span>
-<span class="co">#&gt;  3   507     3  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 2 [30a~ 2 [Sec~</span>
-<span class="co">#&gt;  4   507     4  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 3 [más~ 1 [Pri~</span>
-<span class="co">#&gt;  5   507     5  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 2 [30a~ 3 [Ter~</span>
-<span class="co">#&gt;  6   507     6  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 2 [30a~ 3 [Ter~</span>
-<span class="co">#&gt;  7   507     7  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 1 [Hom~ 1 [18a~ 3 [Ter~</span>
-<span class="co">#&gt;  8   507     8  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 1 [Hom~ 3 [más~ 1 [Pri~</span>
-<span class="co">#&gt;  9   507     9  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 1 [Hom~ 1 [18a~ 2 [Sec~</span>
-<span class="co">#&gt; 10   507    10  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 2 [30a~ 3 [Ter~</span>
-<span class="co">#&gt; # ... with 241,208 more rows, and 17 more variables: educacion &lt;dbl+lbl&gt;,</span>
-<span class="co">#&gt; #   sit_ec &lt;dbl+lbl&gt;, sit_fu &lt;dbl+lbl&gt;, sitec &lt;dbl+lbl&gt;, mejora &lt;dbl+lbl&gt;,</span>
-<span class="co">#&gt; #   eval_gob &lt;dbl+lbl&gt;, eval_gob_rec &lt;dbl&gt;, benef_gob &lt;dbl+lbl&gt;,</span>
-<span class="co">#&gt; #   benef_gob_rec &lt;dbl&gt;, adm_gp &lt;dbl+lbl&gt;, adm_gp_rec &lt;dbl&gt;, cor_gob &lt;dbl+lbl&gt;,</span>
-<span class="co">#&gt; #   cor_gob_rec &lt;dbl&gt;, resol_prob &lt;dbl+lbl&gt;, resol_prob_rec &lt;dbl&gt;, icg &lt;dbl&gt;,</span>
-<span class="co">#&gt; #   ponderacion_utdt &lt;dbl&gt;</span></code></pre></div>
 </div>
-<div id="fuentes-sources" class="section level4">
-<h4 class="hasAnchor">
-<a href="#fuentes-sources" class="anchor"></a>FUENTES (<em>Sources</em>)</h4>
+<div id="fuentes-sources" class="section level2">
+<h2 class="hasAnchor">
+<a href="#fuentes-sources" class="anchor"></a>FUENTES (<em>Sources</em>)</h2>
 <p><strong>Índice de Confianza en el Gobierno. Escuela de Gobierno. Universidad Torcuato Di Tella</strong></p>
 <ul>
 <li>Los datos provienen de la las bases en formato <code>.dta</code> descargadas de la página de la Escuela de Gobierno de la Universidad Torcuato Di Tella <a href="https://www.utdt.edu/ver_contenido.php?id_contenido=17876&amp;id_item_menu=28756">utdt.edu/icg</a><br><br>
 (<em>Access to raw data comes from databases in <code>.dta</code> files of the Escuela de Gobierno de la Universidad Torcuato Di Tella</em> <a href="%5B%3Chttps://www.utdt.edu/ver_contenido.php?id_contenido=17876&amp;id_item_menu=28756%3E%5D(https://www.utdt.edu/ver_contenido.php?id_contenido=17876&amp;id_item_menu=28756)%7B.uri%7D">utdt.edu/icg</a>).</li>
 </ul>
 <p><strong>Para consultas sobre el índice, dirigirse a los profesores Carlos Gervasoni (<a href="mailto:cgervasoni@utdt.edu">cgervasoni@utdt.edu</a>) o Javier Zelaznik (<a href="mailto:jzelaznik@utdt.edu">jzelaznik@utdt.edu</a>)</strong></p>
-</div>
 </div>
   </div>
 
@@ -245,7 +243,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Camila Higa, Juan Pablo Ruiz Nicolini.</p>
+  <p>Developed by Camila Higa, <a href="https://tuqmano.ar">Juan Pablo Ruiz Nicolini</a>.</p>
 </div>
 
 <div class="pkgdown">

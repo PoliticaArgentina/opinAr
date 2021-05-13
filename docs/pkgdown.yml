@@ -4,5 +4,8 @@ pkgdown_sha: ~
 articles:
   compute: compute.html
   data: data.html
-last_built: 2021-05-09T23:11Z
+last_built: 2021-05-13T20:16Z
+urls:
+  reference: https://politicaargentina.github.io/opinAr//reference
+  article: https://politicaargentina.github.io/opinAr//articles
 

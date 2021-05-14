@@ -1,12 +1,13 @@
 url: https://politicaargentina.github.io/opinAr/
-
+template:
+  params:
+    bootswatch: cerulean
 home:
   strip_header: true
 
   links:
   - text: ICG - UNIVERSIDAD TORCUATO DI TELLA
     href: https://www.utdt.edu/icg
-
 
 authors:
   Juan Pablo Ruiz Nicolini:

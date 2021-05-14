@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Datos de `opin`ión de política `Ar`rgentina usando `R` <a><img src="https://github.com/politicaargentina/data_warehouse/blob/master/hex/opinAr.PNG?raw=true" width="200" align="right" /></a>
+## Datos de `opin`ión de política `Ar`rgentina usando `R` <a><img src="man/figures/logo.png" width="200" align="right" /></a>
 
 ### ICG
 

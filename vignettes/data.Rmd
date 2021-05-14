@@ -1,8 +1,8 @@
 ---
-title: "Datos"
+title: "Data"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Datos}
+  %\VignetteIndexEntry{Data}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -80,8 +80,9 @@ El ICG puede calcularse segmentado por las variables `zona`, `edad`, `sexo`, `ed
 
 library(opinAr)
 
-get_icg_raw()
+datos <- get_icg_raw()
 
+datos
 ```
 
 #### Explorar el libro de códigos `show_codebook()` (*explore Codebook*)
@@ -104,11 +105,7 @@ La función `show_waves()` muestra las olas y el mes y año correspondientes. Po
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
   
-library(opinAr)
-
-data <- get_icg_raw() 
-
-show_waves(data)
+show_waves(datos)
    
 ```
 

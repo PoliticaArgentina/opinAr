@@ -1,8 +1,8 @@
 ---
-title: "Cálculos"
+title: "Cálculos (Computation)"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Cálculos}
+  %\VignetteIndexEntry{Cálculos (Computation)}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 library(opinAr)
 ```
 
-### CÁLCULOS (*computation*)
+### compute_icg()
 
 Calcula el ICG de cada ola (una por cada mes desde noviembre del 2001\
 \
@@ -54,7 +54,7 @@ La función `compute_icg()` tiene:
   
   # donwnload data 
  
-opinAr::get_icg_raw() -> icg_data
+(opinAr::get_icg_raw() -> icg_data)
  
  # compute ICG
  

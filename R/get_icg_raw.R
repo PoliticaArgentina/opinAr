@@ -9,6 +9,7 @@
 #'@details Respecto el origen de los datos se puede consultar la documentación en
 #' \href{https://www.utdt.edu/ver_contenido.php?id_contenido=1351&id_item_menu=2970}{\code{https://www.utdt.edu/ver_contenido.php?id_contenido=1351&id_item_menu=2970}}.
 #'
+#'
 #'@export
 
 
@@ -29,26 +30,59 @@ get_icg_raw <- function(){
 
   ###### DATA SOURCE INFORMATION ########
 
-  # DATA URL
+  # DATA SOURCE URL AND PATH
+  main = "https://www.utdt.edu"
   url = "https://www.utdt.edu/ver_contenido.php?id_contenido=17876&id_item_menu=28756"
 
-  # HTML ELEMENT PATH
-  xpath = "/html/body/main/section[2]/div/div/div/div[2]/div/span[2]/strong/a"
 
-   ########################################
+  # GET .zip FILE LINK
 
+  link <- rvest::read_html(url) %>%
+    rvest::html_nodes("a.noicon") %>% # Look for all URLs
+    rvest::html_attr('href') %>%
+    dplyr::as_tibble() %>%
+    dplyr::filter(stringr::str_detect(value,"\\.zip")) %>% # ICG dta.zip file
+    dplyr::transmute(value = as.character(glue::glue("{main}{value}"))) %>%  # Create file link
+    dplyr::pull()
+
+
+  # Download file from URL
+
+  # Create temfiles
+
+  temp <- base::tempfile()
+
+  temp2 <- base::tempfile()
+
+  # Download .zip
+
+  utils::download.file(url = link,  temp, quiet = TRUE)
+
+
+  # Unzip files
+
+  utils::unzip(zipfile = temp, exdir = temp2)
+
+  # Select .dta file path
+  icg_file <- base::list.files(temp2, pattern = ".dta$", full.names=TRUE)
+
+
+
+
+  ########################################
   # DOWNLOADING INSTRUTCTIONS
+
+  # Load data from temfile path workflow
 
   # Set default value for try()
 
   default <- NULL
 
-  df <- base::suppressWarnings(base::try(default <- rvest::read_html(url) %>%
-                                           rvest::html_elements(xpath = xpath) %>%
-                                           rvest::html_attr('href') %>%
-                                           haven:: read_dta() %>%
+  df <- base::suppressWarnings(base::try(default <-  haven::read_dta(icg_file) %>%
                                            janitor::clean_names(),
                                          silent = TRUE))
+
+
 
 
   if(is.null(default)){
@@ -63,12 +97,15 @@ get_icg_raw <- function(){
 
        } else {
 
-      df <- df
+            df <- df
 
-      }
+            }
 
-    } else {
+               df
+
+      } else {
 
       df
-  }
+    }
+
 }

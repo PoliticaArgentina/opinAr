@@ -12,6 +12,7 @@ NULL
 
 if(getRversion() >= "2.15.1")  utils::globalVariables(c(".",
                                                         "icg",
+                                                        "value",
                                                         "eval_gob_rec",
                                                         "benef_gob_rec",
                                                         "adm_gp_rec",

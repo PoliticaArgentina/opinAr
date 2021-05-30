@@ -167,12 +167,12 @@
 <p>(<em><code><a href="../reference/get_icg_raw.html">get_icg_raw()</a></code> is the main function to get the available data</em>).</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">opinAr</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/PoliticaArgentina/opinAr">opinAr</a></span><span class="op">)</span>
 
 <span class="va">datos</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_icg_raw.html">get_icg_raw</a></span><span class="op">(</span><span class="op">)</span>
 
 <span class="va">datos</span>
-<span class="co">#&gt; # A tibble: 241,218 x 28</span>
+<span class="co">#&gt; # A tibble: 248,431 x 29</span>
 <span class="co">#&gt;      ola  caso   ano   mes   dia  ciudad    zona  region    sexo    edad     edu</span>
 <span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt;</span>
 <span class="co">#&gt;  1   507     1  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 3 [más~ 1 [Pri~</span>
@@ -185,12 +185,12 @@
 <span class="co">#&gt;  8   507     8  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 1 [Hom~ 3 [más~ 1 [Pri~</span>
 <span class="co">#&gt;  9   507     9  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 1 [Hom~ 1 [18a~ 2 [Sec~</span>
 <span class="co">#&gt; 10   507    10  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 2 [30a~ 3 [Ter~</span>
-<span class="co">#&gt; # ... with 241,208 more rows, and 17 more variables: educacion &lt;dbl+lbl&gt;,</span>
+<span class="co">#&gt; # ... with 248,421 more rows, and 18 more variables: educacion &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   sit_ec &lt;dbl+lbl&gt;, sit_fu &lt;dbl+lbl&gt;, sitec &lt;dbl+lbl&gt;, mejora &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   eval_gob &lt;dbl+lbl&gt;, eval_gob_rec &lt;dbl&gt;, benef_gob &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   benef_gob_rec &lt;dbl&gt;, adm_gp &lt;dbl+lbl&gt;, adm_gp_rec &lt;dbl&gt;, cor_gob &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   cor_gob_rec &lt;dbl&gt;, resol_prob &lt;dbl+lbl&gt;, resol_prob_rec &lt;dbl&gt;, icg &lt;dbl&gt;,</span>
-<span class="co">#&gt; #   ponderacion_utdt &lt;dbl&gt;</span></code></pre></div>
+<span class="co">#&gt; #   localidad &lt;dbl&gt;, ponderacion_utdt &lt;dbl&gt;</span></code></pre></div>
 </div>
 <div id="explorar-el-libro-de-códigos-show_codebook-explore-codebook" class="section level4">
 <h4 class="hasAnchor">
@@ -220,10 +220,8 @@
 <p>(<em><code><a href="../reference/show_waves.html">show_waves()</a></code> function displays the number of waves and the corresponding year and month. By default the parameter <code>viewer = FALSE</code> prints the result in console. If instead we write <code>viewer = TRUE</code> data is presented in the <code>RStudio</code> Viewer</em>).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  
-
-
 <span class="fu"><a href="../reference/show_waves.html">show_waves</a></span><span class="op">(</span><span class="va">datos</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 229 x 3</span>
+<span class="co">#&gt; # A tibble: 235 x 3</span>
 <span class="co">#&gt;      ola   mes   ano</span>
 <span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span>
 <span class="co">#&gt;  1   502    11  2001</span>
@@ -236,7 +234,7 @@
 <span class="co">#&gt;  8   509     6  2002</span>
 <span class="co">#&gt;  9   510     7  2002</span>
 <span class="co">#&gt; 10   511     8  2002</span>
-<span class="co">#&gt; # ... with 219 more rows</span></code></pre></div>
+<span class="co">#&gt; # ... with 225 more rows</span></code></pre></div>
 </div>
 </div>
 <div id="fuentes-sources" class="section level2">

@@ -103,7 +103,17 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">opinAr</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/PoliticaArgentina/opinAr">opinAr</a></span><span class="op">)</span></code></pre></div>
+<p>El Índice de Confianza en el Gobierno (ICG) se calcula a partir de 5 dimensiones, cada una de las cuales intenta captar lo que los ciudadanos piensan respecto a aspectos esenciales del gobierno nacional. El índice tiene un valor comprendido entre un mínimo de 0 y un máximo de 5. Para obtener el ICG con la base cruda, hay que calcular el promedio de la columna <code>icg</code> ponderada por <code>ponderacion_utdt</code>.</p>
+<p>(<em>The ICG has 5 dimensions and each one tries to reflect what is thought about main aspects of the national government. The Index is a value between 0 and 5. The ICG is obtained calculating the mean of the <code>icg</code> column weighted with using the <code>ponderacion_utdt</code> variable:</em>).</p>
+<p><span class="math display">\[
+\frac{\sum icg*ponderacion\_utdt} { \sum ponderacion\_utdt }
+\]</span></p>
+<p>El mismo cálculo aplica para cada una de las dimensiones del ICG, considerando la variable recodificada de la dimensión correspondiente (tiene valor 0 o 5). Por ejemplo, para computar el resultado de la dimensión ‘evaluación general del gobierno’, se debe usar ‘eval_gob_rec’.</p>
+<p>(<em>For computing the result for each dimension of the ICG, it must be applied the same calculation as before but with the recoded variable (value 0 or 5). For example, to compute the result of ‘evaluación general del gobierno (eval_gob)’, it must be used ‘eval_gob_rec’</em>).</p>
+<p><span class="math display">\[
+\frac{\sum eval\_gob\_rec*ponderacion\_utdt} { \sum ponderacion\_utdt }
+\]</span></p>
 <div id="compute_icg" class="section level3">
 <h3 class="hasAnchor">
 <a href="#compute_icg" class="anchor"></a>compute_icg()</h3>
@@ -120,11 +130,6 @@
 <div id="ejemplo-example" class="section level3">
 <h3 class="hasAnchor">
 <a href="#ejemplo-example" class="anchor"></a>Ejemplo (<em>Example</em>)</h3>
-</div>
-<div id="compute_icg-1" class="section level3">
-<h3 class="hasAnchor">
-<a href="#compute_icg-1" class="anchor"></a><strong><code>compute_icg()</code></strong>
-</h3>
 <p>El cálculo se realizará con los datos previamente descargados con <code><a href="../reference/get_icg_raw.html">get_icg_raw()</a></code>.</p>
 <p>La función <code><a href="../reference/compute_icg.html">compute_icg()</a></code> tiene:</p>
 <ul>
@@ -138,7 +143,7 @@
   <span class="co"># donwnload data </span>
  
 <span class="op">(</span><span class="fu">opinAr</span><span class="fu">::</span><span class="fu"><a href="../reference/get_icg_raw.html">get_icg_raw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">icg_data</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 241,218 x 28</span>
+<span class="co">#&gt; # A tibble: 248,431 x 29</span>
 <span class="co">#&gt;      ola  caso   ano   mes   dia  ciudad    zona  region    sexo    edad     edu</span>
 <span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt;</span>
 <span class="co">#&gt;  1   507     1  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 3 [más~ 1 [Pri~</span>
@@ -151,17 +156,17 @@
 <span class="co">#&gt;  8   507     8  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 1 [Hom~ 3 [más~ 1 [Pri~</span>
 <span class="co">#&gt;  9   507     9  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 1 [Hom~ 1 [18a~ 2 [Sec~</span>
 <span class="co">#&gt; 10   507    10  2002     4    NA 0 [GBA] 2 [BsA~ 1 [AMB~ 0 [Muj~ 2 [30a~ 3 [Ter~</span>
-<span class="co">#&gt; # ... with 241,208 more rows, and 17 more variables: educacion &lt;dbl+lbl&gt;,</span>
+<span class="co">#&gt; # ... with 248,421 more rows, and 18 more variables: educacion &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   sit_ec &lt;dbl+lbl&gt;, sit_fu &lt;dbl+lbl&gt;, sitec &lt;dbl+lbl&gt;, mejora &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   eval_gob &lt;dbl+lbl&gt;, eval_gob_rec &lt;dbl&gt;, benef_gob &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   benef_gob_rec &lt;dbl&gt;, adm_gp &lt;dbl+lbl&gt;, adm_gp_rec &lt;dbl&gt;, cor_gob &lt;dbl+lbl&gt;,</span>
 <span class="co">#&gt; #   cor_gob_rec &lt;dbl&gt;, resol_prob &lt;dbl+lbl&gt;, resol_prob_rec &lt;dbl&gt;, icg &lt;dbl&gt;,</span>
-<span class="co">#&gt; #   ponderacion_utdt &lt;dbl&gt;</span>
+<span class="co">#&gt; #   localidad &lt;dbl&gt;, ponderacion_utdt &lt;dbl&gt;</span>
  
  <span class="co"># compute ICG</span>
  
 <span class="fu">opinAr</span><span class="fu">::</span><span class="fu"><a href="../reference/compute_icg.html">compute_icg</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">icg_data</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 229 x 7</span>
+<span class="co">#&gt; # A tibble: 235 x 7</span>
 <span class="co">#&gt;      ola   icg eval_gob_rec benef_gob_rec adm_gp_rec cor_gob_rec resol_prob_rec</span>
 <span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;          &lt;dbl&gt;</span>
 <span class="co">#&gt;  1   502  1.04         0.4           0.82       0.5         1.99           1.47</span>
@@ -174,7 +179,7 @@
 <span class="co">#&gt;  8   509  0.48         0.19          0.38       0.21        0.82           0.81</span>
 <span class="co">#&gt;  9   510  0.4          0.09          0.39       0.21        0.73           0.59</span>
 <span class="co">#&gt; 10   511  0.43         0.09          0.37       0.24        0.69           0.74</span>
-<span class="co">#&gt; # ... with 219 more rows</span></code></pre></div>
+<span class="co">#&gt; # ... with 225 more rows</span></code></pre></div>
 <p><strong>Cálculo segmentado: <code>icg</code> con apertura por género</strong></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  
@@ -182,8 +187,8 @@
  <span class="co">###  ICG by gender</span>
  
    <span class="fu">opinAr</span><span class="fu">::</span><span class="fu"><a href="../reference/compute_icg.html">compute_icg</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">icg_data</span> , segment_by <span class="op">=</span> <span class="va">sexo</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 458 x 8</span>
-<span class="co">#&gt; # Groups:   ola [229]</span>
+<span class="co">#&gt; # A tibble: 470 x 8</span>
+<span class="co">#&gt; # Groups:   ola [235]</span>
 <span class="co">#&gt;      ola       sexo   icg eval_gob_rec benef_gob_rec adm_gp_rec cor_gob_rec</span>
 <span class="co">#&gt;    &lt;dbl&gt;  &lt;dbl+lbl&gt; &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;</span>
 <span class="co">#&gt;  1   502 0 [Mujer]   0.98         0.44          0.86       0.41        1.78</span>
@@ -196,7 +201,7 @@
 <span class="co">#&gt;  8   505 1 [Hombre]  0.96         0.53          0.89       0.31        1.07</span>
 <span class="co">#&gt;  9   506 0 [Mujer]   0.72         0.38          0.61       0.39        0.78</span>
 <span class="co">#&gt; 10   506 1 [Hombre]  1.03         0.46          0.58       0.56        1.41</span>
-<span class="co">#&gt; # ... with 448 more rows, and 1 more variable: resol_prob_rec &lt;dbl&gt;</span></code></pre></div>
+<span class="co">#&gt; # ... with 460 more rows, and 1 more variable: resol_prob_rec &lt;dbl&gt;</span></code></pre></div>
 <p><strong>Cálculo segmentado II: <code>icg</code> por calendario</strong></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  

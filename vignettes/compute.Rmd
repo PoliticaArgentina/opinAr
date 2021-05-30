@@ -18,17 +18,22 @@ knitr::opts_chunk$set(
 library(opinAr)
 ```
 
-El Índice de Confianza en el Gobierno (ICG) se calcula a partir de 5 dimensiones, cada una de las cuales intenta captar lo que los ciudadanos piensan respecto a aspectos esenciales del gobierno nacional. El índice tiene un valor comprendido entre un mínimo de 0 y un máximo de 5. Para obtener el ICG con la base cruda, hay que calcular el promedio de la columna `icg` ponderada por `ponderacion_utdt`, es decir: (*The ICG has 5 dimensions and each one tries to reflect what is thought about main aspects of the national government. The Index is a value between 0 and 5. The ICG is obtained calculating the mean of the `icg` column weighted with using the `ponderacion_utdt` variable:*).
+El Índice de Confianza en el Gobierno (ICG) se calcula a partir de 5 dimensiones, cada una de las cuales intenta captar lo que los ciudadanos piensan respecto a aspectos esenciales del gobierno nacional. El índice tiene un valor comprendido entre un mínimo de 0 y un máximo de 5. Para obtener el ICG con la base cruda, hay que calcular el promedio de la columna `icg` ponderada por `ponderacion_utdt`.
+
+(*The ICG has 5 dimensions and each one tries to reflect what is thought about main aspects of the national government. The Index is a value between 0 and 5. The ICG is obtained calculating the mean of the `icg` column weighted with using the `ponderacion_utdt` variable:*).
 
 $$
 \frac{\sum icg*ponderacion\_utdt} { \sum ponderacion\_utdt }
 $$
 
-El mismo cálculo aplica para cada una de las dimensiones del ICG, considerando la variable recodificada de la dimensión correspondiente (tiene valor 0 o 5). Por ejemplo, para computar el resultado de la dimensión 'evaluación general del gobierno', se debe usar 'eval_gob_rec'. (*For computing the result for each dimension of the ICG, it must be applied the same calculation as before but with the recoded variable (value 0 or 5). For example, to compute the result of 'evaluación general del gobierno (eval_gob)', it must be used 'eval_gob_rec'*). 
+El mismo cálculo aplica para cada una de las dimensiones del ICG, considerando la variable recodificada de la dimensión correspondiente (tiene valor 0 o 5). Por ejemplo, para computar el resultado de la dimensión 'evaluación general del gobierno', se debe usar 'eval_gob_rec'.
 
- $$
+(*For computing the result for each dimension of the ICG, it must be applied the same calculation as before but with the recoded variable (value 0 or 5). For example, to compute the result of 'evaluación general del gobierno (eval_gob)', it must be used 'eval_gob_rec'*).
+
+$$
 \frac{\sum eval\_gob\_rec*ponderacion\_utdt} { \sum ponderacion\_utdt }
 $$
+
 ### compute_icg()
 
 Calcula el ICG de cada ola (una por cada mes desde noviembre del 2001\
@@ -46,8 +51,6 @@ Calcula el ICG de cada ola (una por cada mes desde noviembre del 2001\
 ------------------------------------------------------------------------
 
 ### Ejemplo (*Example*)
-
-### **`compute_icg()`**
 
 El cálculo se realizará con los datos previamente descargados con `get_icg_raw()`.
 

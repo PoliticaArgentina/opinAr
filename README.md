@@ -92,3 +92,7 @@ Una entrada para usuarios (*an entry for LaTeX users*):
         year = {2021},
         note = {R package version 0.0.1},
       }
+
+## `{opinAr}` es parte del universo de paquetes **polAr**
+
+![](https://github.com/PoliticaArgentina/data_warehouse/raw/master/hex/collage.png)<!-- -->

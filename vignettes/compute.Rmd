@@ -96,7 +96,7 @@ opinAr::compute_icg(data = icg_data)
 # Consultamos ID de olas de interés. Por ejemplo de los meses de diciembre durante la presidencia de Mauricio Macri
 
  opinAr::show_waves(data = icg_data) %>% 
-  dplyr::filter(mes == 12 & (ano >= 2015 & ano < 2019)) # filtramos para obtener número de ola de interes
+  dplyr::filter(mes == 12 & (anio >= 2015 & anio < 2019)) # filtramos para obtener número de ola de interes
  
  
  opinAr::compute_icg(data = icg_data, 

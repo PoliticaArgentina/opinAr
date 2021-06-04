@@ -79,7 +79,8 @@ get_icg_raw <- function(){
   default <- NULL
 
   df <- base::suppressWarnings(base::try(default <-  haven::read_dta(icg_file) %>%
-                                           janitor::clean_names(),
+                                           janitor::clean_names() %>%
+                                           dplyr::rename(anio = ano),
                                          silent = TRUE))
 
 
@@ -88,7 +89,8 @@ get_icg_raw <- function(){
   if(is.null(default)){
 
     df <- base::suppressWarnings(base::try(default <- haven::read_dta(file = "https://github.com/politicaargentina/data_warehouse/raw/master/opinAr/data_raw/icg.dta") %>%
-      janitor::clean_names(),
+      janitor::clean_names() %>%
+        dplyr::rename(anio = ano),
     silent = TRUE))
 
    if(is.null(default)){

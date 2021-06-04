@@ -24,4 +24,5 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(c(".",
                                                         "benef_gob_rec_weighted",
                                                         "adm_gp_rec_weighted",
                                                         "cor_gob_rec_weighted",
-                                                        "resol_prob_rec_weighted"))
+                                                        "resol_prob_rec_weighted",
+                                                        "ano"))

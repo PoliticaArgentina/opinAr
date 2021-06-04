@@ -26,16 +26,16 @@ show_waves <- function(data = NULL,
   assertthat::assert_that(!is.null(data),
                           msg = glue::glue("'data' can not be NULL. Yoy can download ir with 'get_icg_raw() function"))
   #bind the variable locally
-  ano <- mes <- fecha <- NULL
+  anio <- mes <- fecha <- NULL
 
     waves <- data %>%
-      dplyr::mutate(fecha = base::as.Date(base::paste0(ano,"-",mes,"-01"))) %>%
+      dplyr::mutate(fecha = base::as.Date(base::paste0(anio,"-",mes,"-01"))) %>%
       dplyr::select(ola, fecha) %>%
       dplyr::group_by(ola) %>%
       dplyr::arrange(fecha) %>%
       dplyr::slice(2) %>%
       dplyr::ungroup() %>%
-      dplyr::mutate(mes = lubridate::month(fecha), ano = lubridate::year(fecha)) %>%
+      dplyr::mutate(mes = lubridate::month(fecha), anio = lubridate::year(fecha)) %>%
       dplyr::select(-fecha)
 
   if(viewer == FALSE){

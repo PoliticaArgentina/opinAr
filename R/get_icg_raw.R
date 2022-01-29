@@ -42,7 +42,7 @@ get_icg_raw <- function(){
     rvest::html_attr('href') %>%
     dplyr::as_tibble() %>%
     dplyr::filter(stringr::str_detect(value,"\\.zip")) %>% # ICG dta.zip file
-   # dplyr::transmute(value = as.character(glue::glue("{main}{value}"))) %>%  # Create file link
+    dplyr::transmute(value = as.character(glue::glue("{main}{value}"))) %>%  # Create file link
     dplyr::pull()
 
 

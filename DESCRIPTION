@@ -13,8 +13,7 @@ Authors@R:
            comment = c(ORCID = "0000-0002-3138-6343")))
 Description: El paquete fue pensado como una caja de herramientas para el trabajo con datos de opinión pública de Argentina. El mismo  facilita el acceso a los microdatos y el cálculos de indicadores del Índice de Confianza en el Gobierno (ICG), elaborado por la Universidad Torcuato Di Tella.
 License: MIT + file LICENSE
-URL: https://github.com/PoliticaArgentina/opinAr, 
-    https://politicaargentina.github.io/opinAr
+URL: https://github.com/PoliticaArgentina/opinAr
 BugRepots: https://github.com/PoliticaArgentina/opinAr/issues
 Encoding: UTF-8
 LazyData: true

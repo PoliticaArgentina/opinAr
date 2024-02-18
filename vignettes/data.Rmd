@@ -159,4 +159,6 @@ show_waves(datos)
     \
     (*Access to raw data comes from databases in `.dta` files of the Escuela de Gobierno de la Universidad Torcuato Di Tella* [utdt.edu/icg](https://www.utdt.edu/icg).
 
-**Para consultas sobre el índice, dirigirse a los profesores Carlos Gervasoni ([cgervasoni\@utdt.edu](mailto:cgervasoni@utdt.edu)) o Javier Zelaznik ([jzelaznik\@utdt.edu](mailto:jzelaznik@utdt.edu))**
+**Para consultas sobre el índice, dirigirse a los profesores Darío Judzik ([djudzik@utdt.edu](mailto:djudzik@utdt.edu)) o Guadalupe Dorna ([gdorna@utdt.edu](mailto:gdorna@utdt.edu))**.
+
+

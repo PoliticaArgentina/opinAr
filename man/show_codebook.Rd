@@ -5,7 +5,7 @@
 \title{Muestra libro de códigos
 (\emph{(Show codebook)})}
 \usage{
-show_codebook(data = NULL, viewer = F)
+show_codebook(data = NULL, viewer = FALSE)
 }
 \arguments{
 \item{data}{un tibble guardado como objeto en el enviroment luego de consultar \code{\link{get_icg_raw}}

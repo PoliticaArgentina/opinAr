@@ -4,7 +4,7 @@
 \alias{show_waves}
 \title{Computa el ICG (\emph{Compute ICG})}
 \usage{
-show_waves(data = NULL, viewer = F)
+show_waves(data = NULL, viewer = FALSE)
 }
 \arguments{
 \item{data}{un tibble guardado como objeto en el enviroment luego de consultar \code{\link{get_icg_raw}}

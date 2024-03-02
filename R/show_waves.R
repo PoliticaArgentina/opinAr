@@ -21,7 +21,7 @@
 
 
 show_waves <- function(data = NULL,
-                       viewer = F){
+                       viewer = FALSE){
 
   assertthat::assert_that(!is.null(data),
                           msg = glue::glue("'data' can not be NULL. Yoy can download ir with 'get_icg_raw() function"))

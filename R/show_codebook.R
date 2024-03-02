@@ -21,9 +21,9 @@
 
 
 show_codebook <- function(data = NULL,
-                          viewer = F){
+                          viewer = FALSE){
 
-  if(viewer == F){
+  if(viewer == FALSE){
 
     icg_codebook
 

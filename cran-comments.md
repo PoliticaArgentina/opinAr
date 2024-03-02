@@ -1,4 +1,8 @@
 
+# Versión 1.0.0 (re submission)
+
+Fixed typo in DESCRIPTION file as asked in email. 
+Properly use complete text fro boolean (FALSE)
 
 # Versión 1.0.0 (re submission)
 

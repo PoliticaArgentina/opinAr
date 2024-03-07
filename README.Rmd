@@ -19,9 +19,13 @@ knitr::opts_chunk$set(
 `{opinAr}` brinda herramientas que facilitan el acceso y el trabajo con datos de opinión del _Índice de Confianza en el Gobierno_ (ICG), relevados por la Universidad Torcuato Di Tella. 
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) 
-[![CRAN status](https://www.r-pkg.org/badges/version/opinAr)](https://CRAN.R-project.org/package=opinAr)
-[![R build status](https://github.com/PoliticaArgentina/opinAr/workflows/R-CMD-check/badge.svg)](https://github.com/PoliticaArgentina/opinAr/actions)
+
+[![](https://www.r-pkg.org/badges/version/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)
+[![](http://cranlogs.r-pkg.org/badges/last-month/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)[![](http://cranlogs.r-pkg.org/badges/last-week/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)[![](http://cranlogs.r-pkg.org/badges/last-month/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)[![](http://cranlogs.r-pkg.org/badges/grand-total/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)
+[![R build
+status](https://github.com/PoliticaArgentina/opinAr/workflows/R-CMD-check/badge.svg)](https://github.com/PoliticaArgentina/opinAr/actions)
+
+
 
 <!-- badges: end -->
 
@@ -57,17 +61,42 @@ _El índice se presenta en una escala que varía entre un mínimo de 0 y un máx
 
 ---
 
-### INSTALACIÓN
+------------------------------------------------------------------------
 
-### Versión en desarrollo (*Development version*) 
+## INSTALACIÓN (*Install*)
 
-```r
+### Desde `CRAN` (versión estable)
 
+``` r
+
+# Install opinAr in R:
+
+install.packages('opinAr')
+```
+
+### Versión en desarrollo (*Development version*)
+
+#### Desde *GitHub*
+
+``` r
 # install.packages('devtools') si no tiene instalado devtools
 
 devtools::install_github("politicaargentina/opinAr")
-
 ```
+
+#### `r-universe`
+
+Se puede agregar el repositorio de
+[`r-universe`](https://politicaargentina.r-universe.dev/builds) como
+parámetro a la función base `install.packages`:
+
+``` r
+
+# Install geoAr in R:
+install.packages('opinAr', repos = c('https://politicaargentina.r-universe.dev')
+```
+
+
 
 ### ARTÍCULOS (_Articles_)
 
@@ -81,9 +110,10 @@ devtools::install_github("politicaargentina/opinAr")
 Para citar `{opinAr}` usar (_to cite package ‘opinAr’ in publications use_):
 
 ```
-   Camila Higa and Juan Pablo Ruiz Nicolini (2021).
-  opinAr: Argentina´s Public Opinion Toolbox. R
-  package version 0.0.1.
+   Higa C, Ruiz Nicolini J (2023). _opinAr: Argentina´s Public Opinion Toolbox_.
+  https://github.com/PoliticaArgentina/opinAr,
+  https://politicaargentina.github.io/opinAr.
+
 ```
 
 Una entrada para usuarios \LaTeX (_an entry for LaTeX users_):
@@ -91,9 +121,10 @@ Una entrada para usuarios \LaTeX (_an entry for LaTeX users_):
 ``` 
   @Manual{,
     title = {opinAr: Argentina´s Public Opinion Toolbox},
-    author = {Camila {Higa} and Juan Pablo Ruiz Nicolini},
-    year = {2021},
-    note = {R package version 0.0.1},
+    author = {Camila Higa and Juan Pablo {Ruiz Nicolini}},
+    year = {2023},
+    note = {https://github.com/PoliticaArgentina/opinAr,
+https://politicaargentina.github.io/opinAr},
   }
 
 ```

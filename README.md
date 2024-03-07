@@ -11,25 +11,23 @@ relevados por la Universidad Torcuato Di Tella.
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/opinAr)](https://CRAN.R-project.org/package=opinAr)
+[![](https://www.r-pkg.org/badges/version/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)
+[![](http://cranlogs.r-pkg.org/badges/last-month/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)[![](http://cranlogs.r-pkg.org/badges/last-week/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)[![](http://cranlogs.r-pkg.org/badges/last-month/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)[![](http://cranlogs.r-pkg.org/badges/grand-total/opinAr?color=blue)](https://cran.r-project.org/package=opinAr)
 [![R build
 status](https://github.com/PoliticaArgentina/opinAr/workflows/R-CMD-check/badge.svg)](https://github.com/PoliticaArgentina/opinAr/actions)
 
 <!-- badges: end -->
 
--   `get_icg_raw()` descarga la base de microdatos del ICG
+- `get_icg_raw()` descarga la base de microdatos del ICG
 
--   `show_codebook()` permite explorar el libro de códgios (variables,
-    etiquetas y valores)
+- `show_codebook()` permite explorar el libro de códgios (variables,
+  etiquetas y valores)
 
--   `show_waves()` lista las olas de la encuesta con sus respectivos
-    años y meses
+- `show_waves()` lista las olas de la encuesta con sus respectivos años
+  y meses
 
--   `compute_icg()`permite calcular el índice general y el de las
-    distintas dimensiones
+- `compute_icg()`permite calcular el índice general y el de las
+  distintas dimensiones
 
 ------------------------------------------------------------------------
 
@@ -57,9 +55,22 @@ máximo de 5.*
 
 ------------------------------------------------------------------------
 
-### INSTALACIÓN
+------------------------------------------------------------------------
+
+## INSTALACIÓN (*Install*)
+
+### Desde `CRAN` (versión estable)
+
+``` r
+
+# Install opinAr in R:
+
+install.packages('opinAr')
+```
 
 ### Versión en desarrollo (*Development version*)
+
+#### Desde *GitHub*
 
 ``` r
 # install.packages('devtools') si no tiene instalado devtools
@@ -67,30 +78,43 @@ máximo de 5.*
 devtools::install_github("politicaargentina/opinAr")
 ```
 
+#### `r-universe`
+
+Se puede agregar el repositorio de
+[`r-universe`](https://politicaargentina.r-universe.dev/builds) como
+parámetro a la función base `install.packages`:
+
+``` r
+
+# Install geoAr in R:
+install.packages('opinAr', repos = c('https://politicaargentina.r-universe.dev')
+```
+
 ### ARTÍCULOS (*Articles*)
 
--   [DATOS
-    (*Data*)](https://politicaargentina.github.io/opinAr/articles/data.html)
+- [DATOS
+  (*Data*)](https://politicaargentina.github.io/opinAr/articles/data.html)
 
--   [CÁLCULO DE INDICADORES
-    (*Computations*)](https://politicaargentina.github.io/opinAr/articles/data.html)
+- [CÁLCULO DE INDICADORES
+  (*Computations*)](https://politicaargentina.github.io/opinAr/articles/data.html)
 
 ### CITAR (*Cite*)
 
 Para citar `{opinAr}` usar (*to cite package ‘opinAr’ in publications
 use*):
 
-       Camila Higa and Juan Pablo Ruiz Nicolini (2021).
-      opinAr: Argentina´s Public Opinion Toolbox. R
-      package version 0.0.1.
+       Higa C, Ruiz Nicolini J (2023). _opinAr: Argentina´s Public Opinion Toolbox_.
+      https://github.com/PoliticaArgentina/opinAr,
+      https://politicaargentina.github.io/opinAr.
 
 Una entrada para usuarios (*an entry for LaTeX users*):
 
       @Manual{,
         title = {opinAr: Argentina´s Public Opinion Toolbox},
-        author = {Camila {Higa} and Juan Pablo Ruiz Nicolini},
-        year = {2021},
-        note = {R package version 0.0.1},
+        author = {Camila Higa and Juan Pablo {Ruiz Nicolini}},
+        year = {2023},
+        note = {https://github.com/PoliticaArgentina/opinAr,
+    https://politicaargentina.github.io/opinAr},
       }
 
 ## `{opinAr}` es parte del universo de paquetes **polAr**
